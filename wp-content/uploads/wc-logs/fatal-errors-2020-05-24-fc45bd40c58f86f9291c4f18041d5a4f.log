@@ -1,0 +1,8 @@
+2020-05-24T19:15:15+00:00 CRITICAL Uncaught Error: Call to undefined function base_url() in D:\prgrms\OSPanel\domains\shop.intakedigital.site\wp-content\themes\files\page-homepage.php:26
+Stack trace:
+#0 D:\prgrms\OSPanel\domains\shop.intakedigital.site\wp-includes\template-loader.php(106): include()
+#1 D:\prgrms\OSPanel\domains\shop.intakedigital.site\wp-blog-header.php(19): require_once('D:\\prgrms\\OSPan...')
+#2 D:\prgrms\OSPanel\domains\shop.intakedigital.site\index.php(17): require('D:\\prgrms\\OSPan...')
+#3 {main}
+  thrown in D:\prgrms\OSPanel\domains\shop.intakedigital.site\wp-content\themes\files\page-homepage.php on line 26
+
