@@ -10,25 +10,96 @@
  */
 
 ?>
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-xs-6 col-sm-6">
+                <div class="footerNav">
+                    <h4>
+                        <?php
+                            $menu_location = get_nav_menu_locations();
+                            $menu_obgect = wp_get_nav_menu_object($menu_location['footer-1']);
+                            echo $menu_obgect->name;
+                        ?>
+                    </h4>
+                    <?php
+                        wp_nav_menu(
+                            array(
+                                'theme_location' => 'footer-1'
+                            )
+                        );
+                    ?>
+                </div>
+            </div>
+            <div class="col-md-3 col-xs-6 col-sm-6">
+                <div class="footerNav">
+                    <h4>
+                        <?php
+                            $menu_location = get_nav_menu_locations();
+                            $menu_obgect = wp_get_nav_menu_object($menu_location['footer-2']);
+                            echo $menu_obgect->name;
+                        ?>
+                    </h4>
+                    <?php
+                        wp_nav_menu(
+                            array(
+                                'theme_location' => 'footer-2'
+                            )
+                        );
+                    ?>
+                </div>
+            </div>
+            <div class="col-md-3 hidden-xs hidden-sm">
+                <div class="footerNav">
+                    <h4>
+                        <?php
+                            $menu_location = get_nav_menu_locations();
+                            $menu_obgect = wp_get_nav_menu_object($menu_location['footer-3']);
+                            echo $menu_obgect->name;
+                        ?>
+                    </h4>
+                    <?php
+                        wp_nav_menu(
+                            array(
+                                'theme_location' => 'footer-3'
+                            )
+                        );
+                    ?>
+                </div>
+            </div>
+            <div class="col-md-3 col-xs-12 col-sm-12">
+                <div class="footerEnd">
+                    <div class="buyIPE">
+                        <a href="<?php echo home_url('/get-ipe/'); ?>">Get Promopool Engine</a>
+                    </div>
+                    <div class="socialLinks">
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'intake-digital-shop' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'intake-digital-shop' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'intake-digital-shop' ), 'intake-digital-shop', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+                    </div>
+                    <div class="powered">
+                        Powered by WebTek Engine
+                        <p>All rights reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row footerRow">
+            <div class="col-md-12">
+                <hr>
+            </div>
+            <div class="col-md-6 col-xs-12 col-sm-12">
+                <div class="footerLogo">
 
-<?php wp_footer(); ?>
-
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12 col-sm-12">
+                <div class="copyright">
+                    Copyright by <?php bloginfo('name'); ?> &copy <?php echo date('Y'); ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
 </body>
+<?php wp_footer(); ?>
 </html>

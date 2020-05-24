@@ -52,7 +52,10 @@ if ( ! function_exists( 'intake_digital_shop_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'intake-digital-shop' ),
+                'menu-1' => esc_html__( 'Primary', 'intake-digital-shop' ),
+                'footer-1' => esc_html__( 'Footer 1', 'intake-digital-shop' ),
+                'footer-2' => esc_html__( 'Footer 2', 'intake-digital-shop' ),
+                'footer-3' => esc_html__( 'Footer 3', 'intake-digital-shop' ),
 			)
 		);
 
@@ -192,6 +195,32 @@ add_action( 'wp_enqueue_scripts', 'intake_scripts' );
 function intake_scripts() {
 	wp_enqueue_style( 'style', get_template_directory_uri() . '/style.css' );
 	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap' );
-	wp_enqueue_style( 'main-style', get_template_directory_uri() . '/assets/css/style.css' );
+    wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css' );
+    wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/css/all.min.css' );
+    wp_enqueue_style( 'owl-carousel', get_template_directory_uri() . '/assets/css/owl.carousel.min.css' );
+    wp_enqueue_style( 'owl-carousel-default', get_template_directory_uri() . '/assets/css/owl.theme.default.min.css' );
+    wp_enqueue_style( 'main-style', get_template_directory_uri() . '/assets/css/style.css' );
+    
+    wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array(), false, true );
+    wp_enqueue_script( 'owl-carousel', get_template_directory_uri() . '/assets/js/owl.carousel.min.js', array(), false, true );
+    wp_enqueue_script( 'scripts', get_template_directory_uri() . '/assets/js/scripts.js', array(), false, true );
 }
 
+/**
+ * Options page
+ */
+    if( function_exists('acf_add_options_page') ) {
+        acf_add_options_page('Main Options');
+    }
+    
+    /**
+     * Diasable Gutenberg
+     */
+    if( 'disable_gutenberg' ){
+        add_filter( 'use_block_editor_for_post_type', '__return_false', 100 );
+        remove_action( 'wp_enqueue_scripts', 'wp_common_block_scripts_and_styles' );
+        add_action( 'admin_init', function(){
+            remove_action( 'admin_notices', [ 'WP_Privacy_Policy_Content', 'notice' ] );
+            add_action( 'edit_form_after_title', [ 'WP_Privacy_Policy_Content', 'notice' ] );
+        } );
+    }

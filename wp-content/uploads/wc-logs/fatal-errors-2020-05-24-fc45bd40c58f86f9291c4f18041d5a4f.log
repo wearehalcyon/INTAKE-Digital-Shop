@@ -6,3 +6,37 @@ Stack trace:
 #3 {main}
   thrown in D:\prgrms\OSPanel\domains\shop.intakedigital.site\wp-content\themes\files\page-homepage.php on line 26
 
+2020-05-24T19:42:49+00:00 CRITICAL syntax error, unexpected '}', expecting ',' or ';' in D:\prgrms\OSPanel\domains\shop.intakedigital.site\wp-content\themes\files\page-homepage.php on line 20
+
+2020-05-24T19:44:42+00:00 CRITICAL Uncaught Error: Call to undefined function base_url() in D:\prgrms\OSPanel\domains\shop.intakedigital.site\wp-content\themes\files\page-homepage.php:35
+Stack trace:
+#0 D:\prgrms\OSPanel\domains\shop.intakedigital.site\wp-includes\template-loader.php(106): include()
+#1 D:\prgrms\OSPanel\domains\shop.intakedigital.site\wp-blog-header.php(19): require_once('D:\\prgrms\\OSPan...')
+#2 D:\prgrms\OSPanel\domains\shop.intakedigital.site\index.php(17): require('D:\\prgrms\\OSPan...')
+#3 {main}
+  thrown in D:\prgrms\OSPanel\domains\shop.intakedigital.site\wp-content\themes\files\page-homepage.php on line 35
+
+2020-05-24T19:55:36+00:00 CRITICAL syntax error, unexpected ''menu_class'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in D:\prgrms\OSPanel\domains\shop.intakedigital.site\wp-content\themes\files\page-homepage.php on line 30
+
+2020-05-24T19:55:42+00:00 CRITICAL syntax error, unexpected ''menu_class'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in D:\prgrms\OSPanel\domains\shop.intakedigital.site\wp-content\themes\files\page-homepage.php on line 30
+
+2020-05-24T20:13:42+00:00 CRITICAL syntax error, unexpected 'endif' (T_ENDIF) in D:\prgrms\OSPanel\domains\shop.intakedigital.site\wp-content\themes\files\page-homepage.php on line 89
+
+2020-05-24T20:16:59+00:00 CRITICAL Uncaught Error: Call to undefined function is_frot_page() in D:\prgrms\OSPanel\domains\shop.intakedigital.site\wp-content\themes\files\page-homepage.php:59
+Stack trace:
+#0 D:\prgrms\OSPanel\domains\shop.intakedigital.site\wp-includes\template-loader.php(106): include()
+#1 D:\prgrms\OSPanel\domains\shop.intakedigital.site\wp-blog-header.php(19): require_once('D:\\prgrms\\OSPan...')
+#2 D:\prgrms\OSPanel\domains\shop.intakedigital.site\index.php(17): require('D:\\prgrms\\OSPan...')
+#3 {main}
+  thrown in D:\prgrms\OSPanel\domains\shop.intakedigital.site\wp-content\themes\files\page-homepage.php on line 59
+
+2020-05-24T20:17:04+00:00 CRITICAL Uncaught Error: Call to undefined function is_frot_page() in D:\prgrms\OSPanel\domains\shop.intakedigital.site\wp-content\themes\files\page-homepage.php:59
+Stack trace:
+#0 D:\prgrms\OSPanel\domains\shop.intakedigital.site\wp-includes\template-loader.php(106): include()
+#1 D:\prgrms\OSPanel\domains\shop.intakedigital.site\wp-blog-header.php(19): require_once('D:\\prgrms\\OSPan...')
+#2 D:\prgrms\OSPanel\domains\shop.intakedigital.site\index.php(17): require('D:\\prgrms\\OSPan...')
+#3 {main}
+  thrown in D:\prgrms\OSPanel\domains\shop.intakedigital.site\wp-content\themes\files\page-homepage.php on line 59
+
+2020-05-24T20:42:25+00:00 CRITICAL syntax error, unexpected 'endif' (T_ENDIF) in D:\prgrms\OSPanel\domains\shop.intakedigital.site\wp-content\themes\files\page-homepage.php on line 38
+
